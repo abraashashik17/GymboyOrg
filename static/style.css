@@ -1,0 +1,473 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #000000, #0a0a0a);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* AUTH BUTTONS */
+.auth-buttons a {
+    margin-left: 10px;
+    padding: 8px 18px;
+    border: 1px solid red;
+    color: red;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.auth-buttons a:hover {
+    background: red;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+}
+
+/* LEFT */
+.left {
+    width: 60%;
+    padding: 0 60px;
+    animation: fadeInLeft 1s ease;
+}
+
+.left h1 {
+    font-size: 90px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.left h1 span {
+    color: red;
+}
+
+/* TAGLINE */
+.tagline {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #bbb;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* 🔥 ULTRA PREMIUM BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #ff0000, #b30000);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    letter-spacing: 1px;
+}
+
+/* GLOW */
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, red, transparent, red);
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.7;
+}
+
+/* SHINE */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);
+}
+
+.btn:hover::before {
+    left: 130%;
+    transition: 0.6s;
+}
+
+/* HOVER */
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 0, 0, 0.8);
+}
+
+/* CLICK */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* PULSE */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+}
+
+.btn {
+    animation: pulse 2s infinite;
+}
+
+/* RIGHT IMAGE */
+.right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInRight 1s ease;
+}
+
+.right img {
+    width: 85%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 20px;
+
+    filter: brightness(0.85) contrast(1.1);
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+
+    transition: 0.4s;
+}
+
+.right img:hover {
+    transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* MEMBERSHIP PAGE */
+
+.membership {
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #bbb;
+    margin-bottom: 50px;
+}
+
+/* PLAN CARDS */
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    width: 280px;
+    border-radius: 20px;
+    text-align: center;
+
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+/* POPULAR PLAN */
+.popular {
+    border: 2px solid red;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+}
+
+/* TEXT */
+.card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.card ul li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+/* BUTTON FIX INSIDE CARD */
+.card .btn {
+    width: 100%;
+}
+/* MEMBERSHIP PAGE */
+
+.membership {
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #bbb;
+    margin-bottom: 50px;
+}
+
+/* PLAN CARDS */
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    width: 280px;
+    border-radius: 20px;
+    text-align: center;
+
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+/* POPULAR PLAN */
+.popular {
+    border: 2px solid red;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+}
+
+/* TEXT */
+.card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    flex-grow: 1;
+}
+
+.card ul li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+/* BUTTON INSIDE CARD */
+.card .btn {
+    width: 100%;
+}
+.card form {
+    margin-top: 20px;
+}
+/* SECTION TITLES */
+.section-title {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: red;
+}
+
+/* ABOUT */
+.about {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* PROGRAMS */
+.programs {
+    padding: 80px 60px;
+}
+
+.program-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.program-card {
+    background: #111;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px red;
+}
+
+/* TRAINERS */
+.trainers {
+    padding: 80px 60px;
+}
+
+.trainer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.trainer-card {
+    background: #111;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px red;
+}
+
+/* BLOG */
+.blog {
+    padding: 80px 60px;
+}
+
+.blog-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.blog-card {
+    background: #111;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px red;
+}
+html {
+    scroll-behavior: smooth;
+}

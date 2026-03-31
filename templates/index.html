@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StayFit Gym</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">StayFit</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#blog">Blog</a>
+        <a href="{{ url_for('membership') }}">Membership</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="left">
+        <h1>
+            Believe<br>
+            <span>Become</span>
+        </h1>
+
+        <p class="tagline">
+            Push your limits, break barriers, and transform into the strongest version of yourself.
+            Join StayFit and begin your journey today.
+        </p>
+
+        <a href="{{ url_for('membership') }}" class="btn">
+            Start Your Transformation →
+        </a>
+    </div>
+
+    <div class="right">
+        <img src="{{ url_for('static', filename='images/gym2.jpg') }}" alt="Gym">
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2 class="section-title">Why StayFit?</h2>
+
+    <p class="about-text">
+        At StayFit Gym, we don’t just build bodies — we build confidence, discipline, and a lifestyle.
+        Our mission is to help you unlock your true potential through world-class training, expert guidance,
+        and an environment that pushes you to be your absolute best.
+
+        Whether you're a beginner or a professional athlete, StayFit provides everything you need —
+        cutting-edge equipment, certified trainers, and a powerful community that motivates you every day.
+
+        This is not just a gym. This is your transformation zone.
+    </p>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="programs">
+    <h2 class="section-title">Our Programs</h2>
+
+    <div class="program-grid">
+
+        <div class="program-card">
+            <h3>Weight Training</h3>
+            <p>Build muscle, strength, and confidence with structured routines.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Fat Loss</h3>
+            <p>Scientifically designed workouts to burn fat efficiently.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Personal Training</h3>
+            <p>Dedicated 1-on-1 coaching for maximum results.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>CrossFit</h3>
+            <p>High-intensity training to boost endurance and power.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Strength & Conditioning</h3>
+            <p>Advanced training for athletes and serious lifters.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Yoga & Flexibility</h3>
+            <p>Improve mobility, flexibility, and mental balance.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- TRAINERS -->
+<section id="trainers" class="trainers">
+    <h2 class="section-title">Meet Our Trainers</h2>
+
+    <div class="trainer-grid">
+
+        <div class="trainer-card">
+            <h3>Arjun Nair</h3>
+            <p class="role">Strength Coach</p>
+            <p>Expert in muscle building and powerlifting with 10+ years experience.</p>
+        </div>
+
+        <div class="trainer-card">
+            <h3>Rahul Mehta</h3>
+            <p class="role">Fat Loss Specialist</p>
+            <p>Helps clients achieve rapid and sustainable weight loss.</p>
+        </div>
+
+        <div class="trainer-card">
+            <h3>Vikram Singh</h3>
+            <p class="role">CrossFit Trainer</p>
+            <p>Certified coach focusing on endurance and athletic performance.</p>
+        </div>
+
+        <div class="trainer-card">
+            <h3>Neha Sharma</h3>
+            <p class="role">Yoga Instructor</p>
+            <p>Specialist in flexibility, recovery, and mindfulness training.</p>
+        </div>
+
+        <div class="trainer-card">
+            <h3>Anjali Kapoor</h3>
+            <p class="role">Personal Trainer</p>
+            <p>Designs personalized fitness and nutrition plans.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="blog">
+    <h2 class="section-title">Fitness Insights</h2>
+
+    <div class="blog-grid">
+
+        <div class="blog-card">
+            <h3>Top 5 Muscle Building Tips</h3>
+            <p>Discover proven strategies to gain muscle faster and smarter.</p>
+        </div>
+
+        <div class="blog-card">
+            <h3>Fat Loss Myths Busted</h3>
+            <p>Stop wasting time on bad advice and focus on real results.</p>
+        </div>
+
+        <div class="blog-card">
+            <h3>Beginner Workout Plan</h3>
+            <p>Start your fitness journey with this simple and effective routine.</p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
